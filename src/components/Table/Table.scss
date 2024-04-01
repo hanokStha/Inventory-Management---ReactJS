@@ -1,0 +1,140 @@
+.dataTable {
+  .tableToolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px;
+
+    height: 50px;
+
+    .my__icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 2.2rem;
+      height: 2.2rem;
+      border-radius: 50%;
+      background-color: #e9e4e4;
+      margin: 0rem 0.6rem;
+      cursor: pointer;
+
+      &:hover {
+        background-color: darkgray;
+      }
+    }
+
+    .search__text {
+      border: none;
+      border-bottom: 1px solid rgb(46, 46, 46);
+      width: 0;
+      transition: all 0.3s ease-in-out;
+
+      &:focus {
+        width: 5rem;
+        outline: none;
+        border-bottom-width: 2px;
+      }
+    }
+  }
+
+  .mytable {
+    color: rgb(46, 46, 46);
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+
+    th,
+    td {
+      border-bottom: 1.5px rgba(180, 180, 180, 0.329) solid;
+      padding: 0.5rem 0;
+      font-size: 1rem;
+    }
+
+    th {
+      width: 5rem;
+      font-size: medium;
+      padding: 0.7rem 0;
+      border-left: 1.5px rgba(180, 180, 180, 0.329) solid;
+      border-right: 1.5px rgba(180, 180, 180, 0.329) solid;
+    }
+
+    th:first-child,
+    th:last-child {
+      border-left: none;
+      border-right: none;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f5f5f5;
+    }
+  }
+}
+
+.showColumnHover:hover {
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.search-form button {
+  border: none;
+  background: none;
+  color: #8b8ba7;
+}
+.search-form {
+  --timing: 0.3s;
+  --width-of-input: 200px;
+  --height-of-input: 40px;
+  --border-height: 1px;
+  --input-bg: #fff;
+  --border-color: #6962ad;
+  --border-radius: 30px;
+  --after-border-radius: 1px;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  padding-inline: 0.8em;
+  border-radius: var(--border-radius);
+  transition: border-radius 0.5s ease;
+  background: var(--input-bg, #fff);
+}
+/* styling of Input */
+.search-form .input {
+  font-size: 0.9rem;
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  padding-inline: 0.5em;
+  padding-block: 0.7em;
+  border: none;
+}
+/* styling of animated border */
+.search-form:before {
+  content: "";
+  position: absolute;
+  background: var(--border-color);
+  transform: scaleX(0);
+  transform-origin: center;
+  width: 100%;
+  height: var(--border-height);
+  left: 0;
+  bottom: 0;
+  border-radius: 1px;
+  transition: transform var(--timing) ease;
+}
+/* Hover on Input */
+.search-form:focus-within {
+  border-radius: var(--after-border-radius);
+}
+
+input:focus {
+  outline: none;
+}
+/* here is code of animated border */
+.search-form:focus-within:before {
+  transform: scale(1);
+}
+
+input:not(:placeholder-shown) ~ .reset {
+  opacity: 1;
+  visibility: visible;
+}

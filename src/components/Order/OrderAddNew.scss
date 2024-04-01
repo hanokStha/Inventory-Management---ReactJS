@@ -1,0 +1,159 @@
+.orderaddnew {
+  flex-grow: 1;
+  background-color: #fafafa;
+  height: calc(100vh - 50px);
+
+  .order-header {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem;
+  }
+
+  .title {
+    color: #888;
+    font-size: x-large;
+    font-weight: bold;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+
+  .card {
+    -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+    box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+    transition: 0.3s;
+    margin: 20px;
+    border: 2px rgba(180, 180, 180, 0.329) solid;
+    border-radius: 5px;
+  }
+
+  .container {
+    padding: 1rem;
+    height: 100%;
+  }
+
+  .button-loader {
+    width: 25px;
+    height: 25px;
+    margin: 0 1rem;
+    border: 3px solid transparent;
+    border-top-color: #ffffff;
+    border-radius: 50%;
+    animation: button-loading-spinner 1s ease infinite;
+  }
+
+  @keyframes button-loading-spinner {
+    from {
+      transform: rotate(0turn);
+    }
+
+    to {
+      transform: rotate(1turn);
+    }
+  }
+}
+
+input {
+  width: 100% !important;
+  padding: 8px 10px !important;
+  border-radius: 5px !important;
+  border: 1px solid #d7d3d3 !important;
+  color: #888 !important;
+  font-size: 14px !important;
+}
+
+input:focus {
+  outline: none !important;
+  border: 1px solid #6962ad !important;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+    rgba(0, 0, 0, 0.06) 0px 1px 2px 0px !important;
+}
+
+label {
+  font-size: 12px !important;
+}
+
+.modal-title {
+  color: #888;
+  padding-left: 20px;
+  font-size: 20px !important;
+}
+
+.btn {
+  border: 2px solid black;
+  background-color: white;
+  color: black;
+  padding: 5px 10px;
+  font-size: 14px;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  transition: color 0.4s, background-color 0.4s;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Green */
+.success {
+  border-color: #6962ad;
+  background: #6962ad;
+  color: white;
+}
+
+.success:hover {
+  background-color: white;
+  color: #6962ad;
+  border-color: #6962ad;
+}
+
+.warning {
+  border-color: #6962ad;
+  color: #6962ad;
+}
+
+.warning:hover {
+  background: #6962ad;
+  color: white;
+}
+
+/* Red */
+.danger {
+  border-color: #f44336;
+  color: rgb(222, 72, 72);
+}
+
+.danger:hover {
+  background: #f44336;
+  color: white;
+}
+
+/* Blue */
+.info {
+  border-color: #2196f3;
+  color: dodgerblue;
+}
+
+.info:hover {
+  background: #2196f3;
+  color: white;
+}
+
+/* #6962AD */
+
+.default {
+  border-color: #e7e7e7;
+  color: black;
+}
+
+.default:hover {
+  background: #e7e7e7;
+}
+
+.dropdown-select div {
+  font-size: 14px !important;
+}
+
+h6 {
+  margin-bottom: 0px;
+}

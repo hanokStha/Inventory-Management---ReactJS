@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --white: #ffffff;
+    --slate-900: #0f172a;
+}
+
+.no-visible-scrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    -webkit-overflow-scrolling: touch;
+}
+
+.no-visible-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.mask-bg-image {
+    background-image: url("/public/images/gridbg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
